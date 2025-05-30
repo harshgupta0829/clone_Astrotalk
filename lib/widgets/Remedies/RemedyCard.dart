@@ -9,9 +9,9 @@ class RemedyCard extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
     final imageHeight = screenWidth * 0.22; // Smaller image
-    final titleFontSize = screenWidth * 0.035; // ~14
-    final descFontSize = screenWidth * 0.03; // ~12
-    final buttonFontSize = screenWidth * 0.032;
+    final titleFontSize = screenWidth * 0.02; // ~14
+    final descFontSize = screenWidth * 0.02; // ~12
+    final buttonFontSize = screenWidth * 0.020;
 
     return Container(
       width: double.infinity,
@@ -114,7 +114,7 @@ class RemedyCard extends StatelessWidget {
                     child: Text(
                       remedy['tag'],
                       style: TextStyle(
-                        fontSize: screenWidth * 0.025,
+                        fontSize: screenWidth * 0.020,
                         fontWeight: FontWeight.bold,
                         color: Colors.orange[800],
                       ),

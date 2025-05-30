@@ -2,7 +2,7 @@
 <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:label="new_astroltalk_ui"
+        android:label="Astrotalk"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

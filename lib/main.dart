@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_astroltalk_ui/widgets/MainScreen.dart';
+import 'package:new_astroltalk_ui/widgets/SplashScreen.dart';
 
 void main() {
   runApp(const AstrotalkApp());
@@ -17,7 +18,7 @@ class AstrotalkApp extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         fontFamily: 'Inter', // Assuming Inter font, can be changed
       ),
-      home: const MainScreen(),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

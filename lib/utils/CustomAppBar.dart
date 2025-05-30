@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:new_astroltalk_ui/widgets/AddCash.dart';
+import 'package:new_astroltalk_ui/widgets/EditProfile.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final VoidCallback? onMenuPressed;
@@ -76,22 +77,31 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                 ),
               ),
 
-              Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: Container(
-                  width: 30,
-                  height: 30,
-                  decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: Colors.yellow,
-                  ),
-                  child: ClipOval(
-                    child: Image.network(
-                      'https://ui-avatars.com/api/?name=SG&background=FFD700&color=000000&size=40',
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const Icon(Icons.person, color: Colors.black);
-                      },
+              GestureDetector(
+                onTap:
+                    () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => EditProfilePage(),
+                      ),
+                    ),
+                child: Padding(
+                  padding: const EdgeInsets.only(right: 10),
+                  child: Container(
+                    width: 30,
+                    height: 30,
+                    decoration: const BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.yellow,
+                    ),
+                    child: ClipOval(
+                      child: Image.network(
+                        'https://ui-avatars.com/api/?name=SG&background=FFD700&color=000000&size=40',
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const Icon(Icons.person, color: Colors.black);
+                        },
+                      ),
                     ),
                   ),
                 ),
